@@ -1,0 +1,135 @@
+body {
+    background-color: #F1F1F1;
+}
+
+/* top navigatie */
+.topnav {
+    background-color: #675C53;
+    padding-bottom: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    margin-right: -0.4em;
+}
+
+.topnav {
+    list-style: none;
+}
+
+.logo {
+    width: 3.5em;
+    position: absolute;
+    top: 0.3em;
+    left: 14em;
+}
+
+.favorieten {
+    width: 3em;
+    margin-bottom: -1.7em;
+    margin-top: -0.5em;
+}
+
+/* bottom navigatie */
+.bottomnav {
+    background-color: #FCD900;
+    width: 100%;
+    list-style: none;
+    padding-bottom: 2em;
+    margin-left: -0.5em;
+    padding-right: 1em;
+}
+
+.sorteer {
+    color: white;
+    background-color: #675C53;
+    padding: 1em;
+    position: absolute;
+    margin-top: 0.6em;
+    border-radius: 1em;
+}
+
+.verras {
+    color: white;
+    background-color: #675C53;
+    padding: 1em;
+    position: absolute;
+    margin-top: -0.45em;
+    margin-left:20em;
+    border-radius: 1em;
+}
+
+.zoek {
+    position: absolute;
+    margin-top: 0.5em;
+    margin-left: 5.5em;
+}
+
+.sferen {
+    background-color: #f2E17A;
+    padding: 0.8em;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    margin-bottom: 1em;
+}
+
+.sferentext {
+    margin-top: -0.5em;
+}
+
+.verderlezen {
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.verderlezentitle {
+    margin-bottom: 0.5em;
+    margin-top: -1em;
+    margin-left: -1em;
+}
+
+.verhaalimg {
+    width: 10em;
+    border-radius: 2em;
+}
+
+.sfeerimg {
+    width: 7em;
+    border-radius: 2em;
+    margin-top: -1em;
+}
+
+.suggesties {
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.suggestiestitle {
+    margin-bottom: 0.5em;
+    margin-top: -1em;
+    margin-left: -1em;
+}
+
+.populair {
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.populairtitle {
+    margin-bottom: 0.5em;
+    margin-top: -1em;
+    margin-left: -1em;
+}
+
+/* voorbeeld */
+.voorbeeld {
+    width: 100%;
+}
