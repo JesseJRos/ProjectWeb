@@ -35,9 +35,13 @@ body {
     background-color: #FCD900;
     width: 100%;
     list-style: none;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
     margin-left: -0.5em;
     padding-right: 1em;
+}
+
+.navstyle {
+    list-style: none;
 }
 
 .sorteer {
@@ -45,8 +49,15 @@ body {
     background-color: #675C53;
     padding: 1em;
     position: absolute;
-    margin-top: 0.6em;
+    margin-top: 0.8em;
+    margin-left: -0.7em;
     border-radius: 1em;
+}
+
+.zoek {
+    position: absolute;
+    margin-top: 1.7em;
+    margin-left: 5em;
 }
 
 .verras {
@@ -54,15 +65,9 @@ body {
     background-color: #675C53;
     padding: 1em;
     position: absolute;
-    margin-top: -0.45em;
-    margin-left:20em;
+    margin-top: 0.8em;
+    margin-left:19.3em;
     border-radius: 1em;
-}
-
-.zoek {
-    position: absolute;
-    margin-top: 0.5em;
-    margin-left: 5.5em;
 }
 
 .sferen {
