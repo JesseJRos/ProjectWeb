@@ -1,33 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     background-color: #F1F1F1;
     font-family: 'Roboto', sans-serif;
 }
 
 /* top navigatie */
-.topnav {
+body nav:nth-of-type(1) {
     background-color: #675C53;
     padding-bottom: 1em;
     margin: -0.5em -0.4em -1em -0.5em;
+    list-style-type: none;
 }
 
-.topnav {
-    list-style: none;
-}
-
-.logo {
+body nav:nth-of-type(1) > img {
     width: 3.5em;
     position: absolute;
     top: 0.3em;
     left: 10em;
 }
 
-.favorieten {
+body nav:nth-of-type(1) a img {
     width: 3em;
     margin: -0.5em 0 -1.7em 0;
 }
 
 /* bottom navigatie */
-.bottomnav {
+body nav:nth-of-type(2) {
     background-color: #FCD900;
     width: 100%;
     list-style: none;
@@ -35,11 +34,18 @@ body {
     margin-left: -0.5em;
 }
 
-.navstyle {
+body nav:nth-of-type(2) img {
+    display: block;
+    margin: 1em 0em 1em 0em;
+    padding: 1em;
+    width: 100%;
+}
+
+body ul:nth-of-type(1) li {
     list-style: none;
 }
 
-.sorteer {
+nav:nth-of-type(2) ul li:nth-of-type(1) {
     color: white;
     background-color: #675C53;
     padding: 1em;
@@ -48,75 +54,195 @@ body {
     border-radius: 1em;
 }
 
-.zoek {
+nav:nth-of-type(2) ul li:nth-of-type(2) {
     position: absolute;
     margin: 1.7em 0 0 4em;
 }
 
-.verras {
+nav:nth-of-type(2) ul li:nth-of-type(3) {
     color: white;
     background-color: #675C53;
     padding: 1em;
     position: absolute;
-    margin: 0.8em 0 0 15em;
+    margin: 0.8em 0 0 14.2em;
     border-radius: 1em;
 }
 
-.sferen {
+/* filter menu */
+body section:nth-of-type(1) {
+    justify-content: center;
+}
+
+body fieldset:nth-of-type(1) {
+
+}
+
+body fieldset ul {
+    margin: auto;
+    margin-top: 0.5em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.5em;
+    width: 15em;
+}
+
+body fieldset:nth-of-type(2) {
+    padding: 1.5em;
+}
+
+body fieldset:nth-of-type(2) input[type="radio"] {
+    display: none;
+}
+
+body fieldset:nth-of-type(2) input[type="radio"]:checked + label {
+    border: solid 0.2em #fcd900;
+    transition: all 0.2s;
+}
+
+body fieldset:nth-of-type(2) label {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: solid 0.12em #ccc;
+}
+
+body fieldset:nth-of-type(3) {
+    padding: 1em;
+}
+
+body fieldset:nth-of-type(3) input[type="radio"] {
+    visibility: hidden;
+    width: 0;
+    position: absolute;
+}
+
+body fieldset:nth-of-type(3) input[type="radio"]:checked + label {
+    border: solid 0.2em #fcd900;
+    transition: all 0.2s;
+}
+
+body fieldset:nth-of-type(3) label {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: solid 0.12em #ccc;
+    margin-left: 0.4em;
+}
+
+body button {
+    margin: 1em 0em -10em 10em;
+    width: 4em;
+    height: 4em;
+    border-style: none;
+    background-color: #FFEA68;
+    border-radius: 10em;
+}
+
+body button:hover {
+    padding: 0em 5em 0em 5em;
+    background-color: #fcd900;
+    width: 7em;
+    height: 4.2em;
+    transition: all 0.2s;
+}
+
+b.ody button:hover img {
+    align-content: center;
+}
+
+body button img {
+    width: 3em;
+    margin: 0.5em 0em 0em 0em;
+}
+
+/*ontdek genres*/
+body section:nth-of-type(2) {
     background-color: #f2E17A;
     padding: 0.8em;
     margin: 0 -0.5em 1em -0.5em;
+    border-radius: 0em 0em 1em 1em;
+    overflow: hidden;
 }
 
-.sferentext {
+body section:nth-of-type(2) h3 {
     margin-top: -0.5em;
+    font-size: 1.2em;
+    margin-left: 0em;
+    position: absolute;
 }
 
-.verderlezen {
-    background-color: #ffffff;
-    border-radius: 1em;
-    padding: 2em 2em 1em 2em;
-    margin-bottom: 1em;
-}
-
-.verderlezentitle {
-    margin: -1em 0 0.5em -1em;
-}
-
-.verhaalimg {
-    width: 10em;
-    border-radius: 2em;
-}
-
-.sfeerimg {
+body section:nth-of-type(2) img {
     width: 7em;
+    height: 4em;
     border-radius: 2em;
-    margin-top: -1em;
+    margin: 1.3em 0em -0.5em -0.8em;
+    overflow: hidden;
+    border-style: none;
 }
 
-.suggesties {
+/* verder lezen */
+body section {
+    position: relative;
+    display: flex;
     background-color: #ffffff;
-    border-radius: 1em;
-    padding: 2em 2em 1em 2em;
+    border-radius: 1em 0em 0em 1em;
+    padding: 2em 2em 2em 2em;
     margin-bottom: 1em;
 }
 
-.suggestiestitle {
+body section h2 {
     margin: -1em 0 0.5em -1em;
+    position: absolute;
 }
 
-.populair {
-    background-color: #ffffff;
-    border-radius: 1em;
-    padding: 2em 2em 1em 2em;
-    margin-bottom: 1em;
+body section a img {
+    margin: -2.5em 0em 0em -1.1em;
+    width: 20em;
+    height: 14em;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: grey;
+    border-width: 0.1em;
 }
 
-.populairtitle {
-    margin: -1em 0 0.5em -1em;
+body section a {
+    width: 11em;
+    margin-right: 1.5em;
 }
 
-/* voorbeeld */
-.voorbeeld {
-    width: 100%;
+body section article {
+    width: 18em;
+    height: 20em;
+    padding: 1em;
+    margin: 2.5em 2em 0em -1.5em;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 2em;
+    border-width: 0.1em;
 }
+
+body section p {
+    font-size: 0.9em;
+}
+
+body section h3 {
+    font-size: 1em;
+}
+
+/* .boxed label {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  border: solid 2px #ccc;
+  transition: all 0.3s;
+}
+
+.boxed input[type="radio"] {
+  display: none;
+}
+
+.boxed input[type="radio"]:checked + label {
+  border: solid 2px green;
+} */
