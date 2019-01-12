@@ -6,60 +6,170 @@
     <meta charset="UTF-8">
     <title>U-OV - 99 verhalen</title>
     <link rel="stylesheet" href="styles/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
     <!-- top navigatie -->
-
-    <nav class="topnav">
-            <li><a href=""><img class="favorieten" src="images/favorite.svg"></a></li>
-            <img class="logo" src="images/logo_uov.svg">
+    <nav>
+        <a href=""><img src="images/favorite.svg"></a>
+        <img src="images/logo_uov.svg">
     </nav>
 
     <!-- bottom navigatie -->
-    <nav class="bottomnav">
+    <nav>
+        <img src="images/99verhalen.svg">
         <ul>
-            <li class="navstyle"><a href="" class="sorteer">Sorteer</a></li>
+            <li><a href="">Filter</a></li>
 
-     <!-- searchbar -->
-        <form action="zoek.html" class="zoek">
-            <input type="search" name="trefwoord">
-            <input type="submit" value="zoek">
-        </form>
+            <!-- searchbar -->
+            <li>
+                <form action="zoek.html">
+                    <input type="search" name="trefwoord">
+                    <input type="submit" value="zoek">
+                </form>
+            </li>
 
-            <li class="navstyle"><a href="" class="verras">Verras me</a></li>
+            <li><a href="">Verras me</a></li>
         </ul>
     </nav>
 
-    <!-- sfeer sectie -->
-    <section class="sferen">
-        <h3 class="sferentext">Ontdek sferen</h3>
-        <a href="verhaalpagina" class="sfeerbutton"><img class="sfeerimg" src="images/sfeerimg1.jpg"></a>
+    <!-- filter menu -->
+    <section>
+        <form>
+            <fieldset>
+               <legend>Genres</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="genre" value="humor" id="humor">
+                        <label for="humor">Humor</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genre" value="dramatisch" id="dramatisch">
+                        <label for="dramatisch">Dramatisch</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genre" value="fantasie" id="fantasie">
+                        <label for="fantasie">Fantasie</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genre" value="poezie" id="poezie">
+                        <label for="poezie">Poëzie</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genre" value="spanning" id="spanning">
+                        <label for="spanning">Spanning</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="genre" value="spanning" id="abstract">
+                        <label for="abstract">Abstract</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vormgeving</legend>
+
+                <input type="radio" name="vormgeving" value="minimaal" id="minimaal">
+                <label for="minimaal">Minimaal</label>
+
+                <input type="radio" name="vormgeving" value="normaal" id="normaal">
+                <label for="normaal">Normaal</label>
+
+                <input type="radio" name="vormgeving" value="veel" id="veel">
+                <label for="veel">Veel</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Aantal woorden</legend>
+
+                <input type="radio" name="aantalwoorden" value="0250" id="0250">
+                <label for="0250">0 - 250</label>
+
+                <input type="radio" name="aantalwoorden" value="250500" id="250500">
+                <label for="250500">250 - 500</label>
+
+                <input type="radio" name="aantalwoorden" value="500meer" id="500meer">
+                <label for="500meer">500+</label>
+            </fieldset>
+
+            <button type="submit" name="submitknop" value="submit">
+            <img src="images/toonresult.svg"></button>
+        </form>
+    </section>
+
+    <!-- genre sectie -->
+    <section>
+        <h3>Ontdek genres</h3>
+        <a href="verhaalpagina"><img src="images/genreimg1.jpg"></a>
+        <a href="verhaalpagina"><img src="images/genreimg1.jpg"></a>
+        <a href="verhaalpagina"><img src="images/genreimg1.jpg"></a>
+        <a href="verhaalpagina"><img src="images/genreimg1.jpg"></a>
     </section>
 
     <!-- sub secties -->
-    <section class="verderlezen">
-        <h2 class="verderlezentitle">Verder lezen</h2>
-        <a href="verhaalpagina"><img class="verhaalimg" src="images/verhaalimg.jpg"></a>
-        <p>Alzheimer (28)</p>
+    <section>
+        <h2>Verder lezen</h2>
+
+        <article>
+            <a href="verhaalpagina"><img src="images/alzheimer.png"></a>
+            <h3>Alzheimer</h3>
+            <p>Genres: dramatisch</p>
+            <footer></footer>
+        </article>
+
+        <article>
+            <a href="verhaalpagina"><img src="images/mop.png"></a>
+            <h3>Mop</h3>
+            <p>Genres: humor</p>
+        </article>
     </section>
 
-    <section class="suggesties">
-        <h2 class="suggestiestitle">Suggesties voor jou</h2>
-        <a href="verhaalpagina"><img class="verhaalimg" src="images/verhaalimg.jpg"></a>
-        <p>De verwarde man (84)</p>
+    <section>
+        <h2>Suggesties voor jou</h2>
+        <article>
+            <a href="verhaalpagina"><img src="images/lepra.png"></a>
+            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de kids</h3>
+            <p>Genres: humor</p>
+        </article>
+
+        <article>
+            <a href="verhaalpagina"><img src="images/droom.jpeg"></a>
+            <h3>Droom</h3>
+            <p>Genres: mysterieus</p>
+        </article>
     </section>
 
-    <section class="populair">
-        <h2 class="populairtitle">Meest populair</h2>
-        <a href="verhaalpagina"><img class="verhaalimg" src="images/verhaalimg.jpg"></a>
-        <p>Kinderboek (75)</p>
+    <section>
+        <h2>Meest populair</h2>
+
+        <article>
+            <a href="verhaalpagina"><img src="images/haiku.jpeg"></a>
+            <h3>Haiku</h3>
+            <p>Genres: abstract</p>
+        </article>
+
+        <article>
+            <a href="verhaalpagina"><img src="images/essentie.jpg"></a>
+            <h3>Essentie</h3>
+            <p>Genres: spanning</p>
+        </article>
     </section>
 
-    <!-- voorbeeld
+    <!-- voorbeeld breakpoint
     <br>
     <br>
-    <img class="voorbeeld" src="images/voorbeeld.png"> -->
+    <img class="voorbeeld" src="images/voorbeeld.png">
 
-    </body>
+    Media query CSS
+
+    /* single column layout */
+    body {
+    color: #fff;
+    }
+
+    /* major breakpoint 1 */
+    @media {min-width: 30em}
+
+     -->
+    <script src="js/javascript.js"></script>
+</body>
