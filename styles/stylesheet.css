@@ -3,13 +3,18 @@
 body {
     background-color: #F1F1F1;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+/*    z-index: 0;*/
 }
 
 /* top navigatie */
 body nav:nth-of-type(1) {
     background-color: #675C53;
+    height: 3.125em;
+    position: relative;
     padding-bottom: 1em;
-    margin: -0.5em -0.4em -1em -0.5em;
+    margin: -0.5em 0em -1.5em 0em;
     list-style-type: none;
 }
 
@@ -28,28 +33,39 @@ body nav:nth-of-type(1) a img {
 /* bottom navigatie */
 body nav:nth-of-type(2) {
     background-color: #FCD900;
-    width: 100%;
-    list-style: none;
-    padding: 0 1em 5em 0;
+    padding: 0 1em 10em 0;
     margin-left: -0.5em;
 }
 
 body nav:nth-of-type(2) img {
     display: block;
-    margin: 1em 0em 1em 0em;
-    padding: 1em;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*    margin: 1em 0em 1em 0em;*/
+    /*    padding: 1em;*/
+    width: 85%;
 }
 
-body ul:nth-of-type(1) li {
+body nav:nth-of-type(2) ul {
+    width: 10em;
+    margin: 0;
+    display: block;
+    justify-content: space-between;
+}
+
+body nav:nth-of-type(2) ul li:first-of-type {
     list-style: none;
+    width: 5em;
+    margin: 0;
 }
 
-body header form {
-    height: 4em;
+body nav:nth-of-type(2) ul li:last-of-type {
+    list-style: none;
+    width: 5em;
+    margin: 0;
 }
 
-
+/* filter knop*/
 nav:nth-of-type(2) ul button {
     border-style: none;
     background-color: #675c53;
@@ -60,15 +76,14 @@ nav:nth-of-type(2) ul button {
 
 nav:nth-of-type(2) ul li:nth-of-type(1) {
     padding: 1em;
-    position: absolute;
 }
 
 /* verras me */
 nav:nth-of-type(2) ul li:nth-of-type(2) {
-    color: white;
-    background-color: #675C53;
-    padding: 1em;
     position: absolute;
+    width: 5em;
+    height: 2.5em;
+    background-color: #675c53;
     border-radius: 1em;
 }
 
@@ -85,10 +100,11 @@ body section:nth-of-type(1).show-form {
 }
 
 body fieldset:nth-of-type(1) {
-
+    border-style: none;
 }
 
-body fieldset ul {
+body fieldset:nth-of-type(1) ul {
+    list-style: none;
     margin: auto;
     margin-top: 0.5em;
     padding: 0;
@@ -100,10 +116,11 @@ body fieldset ul {
 }
 
 body fieldset:nth-of-type(2) {
-    padding: 1.5em;
+    padding: 1em 1em 1em 1em;
+    border-style: none;
 }
 
-body fieldset:nth-of-type(2) input[type="radio"] {
+body fieldset:nth-of-type(2) input {
     display: none;
 }
 
@@ -120,7 +137,8 @@ body fieldset:nth-of-type(2) label {
 }
 
 body fieldset:nth-of-type(3) {
-    padding: 1em;
+    padding: 1em 1em 1em 1em;
+    border-style: none;
 }
 
 body fieldset:nth-of-type(3) input[type="radio"] {
@@ -172,26 +190,34 @@ body form button img {
 /*ontdek genres*/
 body section:nth-of-type(2) {
     background-color: #f2E17A;
-    padding: 0.8em;
-    margin: 0 -0.5em 1em -0.5em;
+    padding: 0em;
+    margin-right: -0.5em;
+    margin-left: -0.5em;
     border-radius: 0em 0em 1em 1em;
-    overflow: hidden;
 }
 
-body section:nth-of-type(2) h3 {
-    margin-top: -0.5em;
+body section:nth-of-type(2) h2 {
     font-size: 1.2em;
-    margin-left: 0em;
-    position: absolute;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+}
+
+body section:nth-of-type(2) ul {
+    display: flex;
+    margin-left: -1em;
+}
+
+body section:nth-of-type(2) li {
+    list-style: none;
+    padding-right: 1em;
 }
 
 body section:nth-of-type(2) img {
     width: 7em;
     height: 4em;
     border-radius: 2em;
-    margin: 1.3em 0em -0.5em -0.8em;
-    overflow: hidden;
     border-style: none;
+    margin-top: 1.5em;
 }
 
 /* verder lezen */
@@ -200,12 +226,13 @@ body section {
     display: flex;
     background-color: #ffffff;
     border-radius: 1em 0em 0em 1em;
-    padding: 2em 2em 2em 2em;
-    margin-bottom: 1em;
+    padding: 3em;
+    /*    margin-bottom: 1em;*/
+    margin: 1.5em 0em 1em 2em;
 }
 
 body section h2 {
-    margin: -1em 0 0.5em -1em;
+    margin: -1em 0 0.5em 0em;
     position: absolute;
 }
 
@@ -228,7 +255,7 @@ body section article {
     width: 18em;
     height: 20em;
     padding: 1em;
-    margin: 2.5em 2em 0em -1.5em;
+    margin: 2.5em 3em 0em 0em;
     border-style: solid;
     border-color: grey;
     border-radius: 2em;
@@ -241,4 +268,31 @@ body section p {
 
 body section h3 {
     font-size: 1em;
+}
+
+/* footer */
+body footer {
+    height: 4em;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0.5em 0.5em 0.5em 0.5em grey;
+}
+
+body footer svg {
+    width: 5em;
+    display: flex;
+    margin-left: 1em;
+    margin-bottom: -5em;
+}
+
+body footer p {
+    color: #675c53;
+    margin-bottom: 0.1em;
+    margin-left: 2em;
+}
+
+body footer a {
+    color: #675c53;
+    margin-left: 2em;
 }
