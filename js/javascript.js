@@ -4,11 +4,11 @@
 
 /*eslint 'no-console': 0*/
 
-var zoekknop = document.querySelector('#filter');
-var header = document.querySelector('body > header');
+var filterknop = document.querySelector('#filter');
+var section = document.querySelector('body section:first-of-type');
 
 
-zoekknop.addEventListener('click', function(){
-    header.classList.toggle('show-form');
+filterknop.addEventListener('click', function(){
+    section.classList.toggle('show-form');
 
 });
