@@ -21,42 +21,82 @@ body nav:nth-of-type(1) > img {
     margin-left: 1em;
 }
 
-body nav:nth-of-type(1) a:first-of-type img {
+body#home nav:nth-of-type(1) a:first-of-type img {
     width: 2em;
     height: 2em;
     margin-top: 0.5em;
     margin-left: 0.5em;
 }
 
-body nav:first-child a:last-of-type img {
+body#home nav:first-child a:last-of-type img {
     width: 4em;
     height: 4em;
     margin-top: -0.5em;
 }
 
+body#verhaalpagina nav:nth-of-type(1) a img {
+    width: 2em;
+    height: 2em;
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+body#verhaalpagina nav:first-child button {
+    border-style: none;
+    background: none;
+}
+
+body#verhaalpagina nav:first-child button img {
+    width: 2.5em;
+    height: 2.2em;
+    margin-top: 0.5em;
+    margin-right: 1em;
+}
+
 /* bottom navigatie */
-body nav:nth-of-type(2) {
+body#home nav:nth-of-type(2) {
     background-color: #FCD900;
     padding-bottom: 1em;
 }
 
-body nav:nth-of-type(2) img {
+body#verhaalpagina nav:nth-of-type(2) {
+    background-color: #FCD900;
+    padding-bottom: 1em;
+}
+
+body#home nav:nth-of-type(2) img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.5em;
     padding-top: 2.5em;
-    width: 85vw;
+    width: 25em;
 }
 
-body nav:nth-of-type(2) ul {
+body#home nav:nth-of-type(2) ul {
     list-style: none;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
-body nav:nth-of-type(2) ul li {
+body#verhaalpagina nav:nth-of-type(2) ul {
+    list-style: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+body#verhaalpagina nav:nth-of-type(2) ul li:first-of-type a img {
+    margin-left: -2.5em;
+    margin-right: 2em;
+}
+
+body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
+    margin-left: -1em;
+}
+
+body#home nav:nth-of-type(2) ul li {
     margin-left: 1em;
     margin-right: 3em;
     background-color: #675c53;
@@ -82,7 +122,7 @@ body nav:nth-of-type(2) ul li a {
     color: white;
 }
 
-/* filter menu */
+/* filter menu MI */
 body section:nth-of-type(1) {
     justify-content: center;
     height: 0;
@@ -214,10 +254,10 @@ body section:nth-of-type(2) li {
 }
 
 body section:nth-of-type(2) img {
-    width: 7em;
+    width: 8em;
     height: 4em;
-    border-radius: 2em;
     border-style: none;
+    border-radius: 1em;
     margin-top: 1.5em;
 }
 
@@ -297,4 +337,280 @@ body footer p {
 body footer a {
     color: #675c53;
     /*    margin-left: 2em;*/
+}
+
+/* header verhaal pagina */
+body#verhaalpagina nav:last-of-type ul {
+    margin-bottom: -1em;
+}
+
+body#verhaalpagina nav:last-of-type ul li:first-of-type img {
+    width: 3.2em;
+    margin-right: 1em;
+    margin-top: 1.3em;
+    margin-left: -5em;
+}
+
+body#verhaalpagina nav:last-of-type ul li:first-of-type {
+    margin-top: -0.5em;
+    margin-right: 0.5em;
+}
+
+body#verhaalpagina nav:last-of-type ul li:last-of-type img {
+    padding-top: 0.5em;
+    width: 22em;
+    margin-right: 1em;
+}
+
+body#verhaalpagina span img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 88vw;
+    height: 50em;
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+    background-image: url(../images/alzheimermobile.jpg);
+}
+
+/* favoriet toevoegen MI */
+body#verhaalpagina section {
+    background-color: #fff;
+    box-shadow: 0.3em 0.4em 1.5em 0em;
+    border-style: solid;
+    border-width: 0.09em;
+    border-color: #554b43;
+    border-radius: 0.625em;
+    height: 12em;
+    width: 18em;
+    margin: auto;
+    margin-top: -40em;
+    position: relative;
+}
+
+body#verhaalpagina section img {
+    width: 9em;
+    margin-top: -0.5em;
+    position: absolute;
+}
+
+body#verhaalpagina section p {
+    margin-top: 7em;
+    text-align: center;
+    font-size: 1.1em;
+    width: 13em;
+    color: #554b43
+}
+
+body#verhaalpagina section.popup-hide {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+body#verhaalpagina section.popup-show {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+body#verhaalpagina section.popup-show img {
+    animation: rotation 0.8s ease-out;
+    animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+        from {
+                transform: rotate(0deg);
+        }
+        to {
+                transform: rotate(360deg);
+        }
+}
+
+
+/* media queries tablet */
+@media (min-width: 48em) {
+
+
+    /* top nav */
+    body#home nav:first-of-type a:first-of-type img {
+        margin-left: 15vw;
+    }
+
+    body#home nav:first-of-type a:last-of-type img {
+        margin-right: 15vw;
+    }
+
+    body#verhaalpagina nav:nth-of-type(1) a:first-of-type img {
+        width: 2em;
+        height: 2em;
+        margin-top: 0.5em;
+        margin-left: 28vw;
+    }
+
+    body#verhaalpagina nav:first-child button img {
+        width: 2em;
+        height: 1.8em;
+        margin-top: 0.5em;
+        margin-right: 26vw;
+    }
+
+    /* bottom navigatie */
+    body#verhaalpagina nav:nth-of-type(2) ul li:first-of-type a img {
+        width: 4em;
+        margin-right: -3em;
+    }
+
+    body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
+        width: 25em;
+    }
+
+    /* ontdek genres */
+    body section:nth-of-type(2) img {
+        width: 8em;
+        height: 4em;
+        border-style: none;
+        border-radius: 1em;
+        margin-top: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    /* 99 verhalen img */
+    body#home nav:nth-of-type(2) img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5em;
+        padding-top: 2.5em;
+        width: 35em;
+    }
+
+    /* filter knop */
+    body nav:nth-of-type(2) ul li:first-of-type button {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    /* verras me */
+    body nav:nth-of-type(2) ul li a {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    body#verhaalpagina span img {
+        width: 100%;
+        background-image: url(../images/alzheimertablet.jpg);
+    }
+
+    /* verhaal toevoegen MI */
+    body#verhaalpagina section {
+        height: 16em;
+        width: 22em;
+        margin: auto;
+        margin-top: -40em;
+        position: relative;
+    }
+
+    body#verhaalpagina section img {
+        width: 13em;
+        margin-top: -0.5em;
+        position: absolute;
+    }
+
+    body#verhaalpagina section p {
+        margin-top: 8.5em;
+        text-align: center;
+        font-size: 1.3em;
+        width: 14em;
+    }
+}
+
+/* media queries desktop */
+@media (min-width: 67em) {
+
+
+    body#home nav:first-of-type a:first-of-type img {
+        margin-left: 31vw;
+    }
+
+    body#home nav:first-of-type a:last-of-type img {
+        margin-right: 31vw;
+    }
+
+    body#verhaalpagina nav:first-of-type a:first-of-type img {
+        margin-left: 34vw;
+    }
+
+    body#verhaalpagina nav:first-of-type button img {
+        margin-right: 34vw;
+    }
+
+    /* bottom navigatie */
+    body#verhaalpagina nav:nth-of-type(2) ul li:first-of-type a img {
+        width: 4.5em;
+        margin-right: -3em;
+        margin-left: -5.5em;
+    }
+
+    body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
+        width: 30em;
+    }
+
+    /* ontdek genres */
+    body section:nth-of-type(2) img {
+        width: 10em;
+        height: auto;
+        border-style: none;
+        border-radius: 1em;
+        margin-right: 2em;
+    }
+
+    /* 99 verhalen img */
+    body#home nav:nth-of-type(2) img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5em;
+        padding-top: 2.5em;
+        width: 45em;
+    }
+
+    /* filter knop */
+    body nav:nth-of-type(2) ul li:first-of-type button {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    /* verras me */
+    body nav:nth-of-type(2) ul li a {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    body#verhaalpagina span img {
+        width: 100%;
+        background-image: url(../images/alzheimer.png);
+    }
+
+        /* verhaal toevoegen MI */
+    body#verhaalpagina section {
+        height: 19em;
+        width: 25em;
+        margin: auto;
+        margin-top: -40em;
+        position: relative;
+    }
+
+    body#verhaalpagina section img {
+        width: 16em;
+        margin-top: -1em;
+        position: absolute;
+    }
+
+    body#verhaalpagina section p {
+        margin-top: 8.5em;
+        text-align: center;
+        font-size: 1.5em;
+        width: 12em;
+    }
 }
