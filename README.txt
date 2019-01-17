@@ -8,4 +8,4 @@ De code is geschreven voor de website waar deze verhalen worden getoond. De prim
 Dit is allemaal mogelijk op de website en in de code staat boven elk onderdeel van de website wat het is.
 
 Vragen over de code?
-Mail: j.ros@hva.nl
+Mail naar j.ros@hva.nl
