@@ -4,6 +4,8 @@ body {
     background-color: #F1F1F1;
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    overflow-x: hidden;
+
 }
 
 /* top navigatie */
@@ -21,45 +23,62 @@ body nav:nth-of-type(1) > img {
     margin-left: 1em;
 }
 
-body#home nav:nth-of-type(1) a:first-of-type img {
+body#home nav:nth-of-type(1) a:first-of-type svg {
     width: 2em;
     height: 2em;
     margin-top: 0.5em;
     margin-left: 0.5em;
 }
 
-body#home nav:first-child a:last-of-type img {
+a svg circle {
+    transition: 0.5s;
+}
+
+a svg path {
+    transition: 0.5s;
+}
+
+a:hover svg circle {
+    fill: #f2e17a;
+}
+
+a:hover svg path {
+    fill: #f2e17a;
+}
+
+a:active svg circle {
+    fill: #fcd900;
+}
+
+a:active svg path {
+    fill: #fcd900;
+}
+
+body nav:nth-of-type(1) a:nth-of-type(2) img {
+    width: 4em;
+    height: 3em;
+}
+
+body#home nav:first-child a:last-of-type svg {
     width: 4em;
     height: 4em;
     margin-top: -0.5em;
 }
 
-body#verhaalpagina nav:nth-of-type(1) a img {
-    width: 2em;
-    height: 2em;
-    margin-top: 0.5em;
-    margin-left: 1em;
+a svg {
+    transition: 0.5s;
 }
 
-body#verhaalpagina nav:first-child button {
-    border-style: none;
-    background: none;
+a:hover svg {
+    fill: #f2e17a;
 }
 
-body#verhaalpagina nav:first-child button img {
-    width: 2.5em;
-    height: 2.2em;
-    margin-top: 0.5em;
-    margin-right: 1em;
+a:active svg {
+    fill: #fcd900;
 }
 
 /* bottom navigatie */
 body#home nav:nth-of-type(2) {
-    background-color: #FCD900;
-    padding-bottom: 1em;
-}
-
-body#verhaalpagina nav:nth-of-type(2) {
     background-color: #FCD900;
     padding-bottom: 1em;
 }
@@ -80,22 +99,6 @@ body#home nav:nth-of-type(2) ul {
     justify-content: center;
 }
 
-body#verhaalpagina nav:nth-of-type(2) ul {
-    list-style: none;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-body#verhaalpagina nav:nth-of-type(2) ul li:first-of-type a img {
-    margin-left: -2.5em;
-    margin-right: 2em;
-}
-
-body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
-    margin-left: -1em;
-}
-
 body#home nav:nth-of-type(2) ul li {
     margin-left: 1em;
     margin-right: 3em;
@@ -103,6 +106,21 @@ body#home nav:nth-of-type(2) ul li {
     border-radius: 0.625em;
     padding: 0.5em 0em 0.5em 0em;
 }
+
+body#home nav:nth-of-type(2) ul li:hover {
+    background-color: #443d38;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(39, 39, 39, 0.5);
+}
+
+/*
+body#home nav:nth-of-type(2) ul li:active {
+    background-color: #443d38;
+    border-color: #675c53;
+    border-width: 2em;
+}
+*/
+
+/* ^^^^^ Testen op mobiel ^^^^^ */
 
 /* filter knop */
 body nav:nth-of-type(2) ul li:first-of-type button {
@@ -253,12 +271,13 @@ body section:nth-of-type(2) li {
     padding-right: 1em;
 }
 
-body section:nth-of-type(2) img {
+body section:nth-of-type(2) a img {
     width: 8em;
     height: 4em;
     border-style: none;
     border-radius: 1em;
     margin-top: 1.5em;
+    margin-left: 0em;
 }
 
 /* verder lezen */
@@ -336,10 +355,30 @@ body footer p {
 
 body footer a {
     color: #675c53;
-    /*    margin-left: 2em;*/
 }
 
-/* header verhaal pagina */
+/* verhaal pagina CSS */
+/* top nav */
+body#verhaalpagina nav:nth-of-type(1) a:first-of-type img {
+    width: 2em;
+    height: 2em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+body#verhaalpagina nav:first-child button {
+    border-style: none;
+    background: none;
+}
+
+body#verhaalpagina nav:first-child button img {
+    width: 2.5em;
+    height: 2.2em;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
+
+/* bottom nav */
 body#verhaalpagina nav:last-of-type ul {
     margin-bottom: -1em;
 }
@@ -373,6 +412,76 @@ body#verhaalpagina span img {
     margin-top: 0.5em;
     background-image: url(../images/alzheimermobile.jpg);
 }
+
+body#verhaalpagina nav:nth-of-type(2) ul {
+    list-style: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+body#verhaalpagina nav:nth-of-type(2) ul li:first-of-type a img {
+    margin-left: -2.5em;
+    margin-right: 2em;
+}
+
+body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
+    margin-left: -1em;
+}
+
+body#verhaalpagina nav:nth-of-type(2) {
+    background-color: #FCD900;
+    padding-bottom: 1em;
+}
+
+/* genre pagina CSS */
+/* top nav */
+body#genrepagina nav:nth-of-type(1) a:first-of-type img {
+    width: 2em;
+    height: 2em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+body#genrepagina nav:first-child a:last-of-type img {
+    width: 4em;
+    height: 4em;
+    margin-top: -0.5em;
+}
+
+/* bottom nav */
+body#genrepagina nav:nth-of-type(2) {
+    background-color: #FCD900;
+    padding-bottom: 1em;
+}
+
+body#genrepagina nav:nth-of-type(2) img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    padding-top: 2.5em;
+    width: 25em;
+}
+
+body#genrepagina nav:nth-of-type(2) ul {
+    list-style: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+body#genrepagina nav:nth-of-type(2) ul li {
+    margin-left: 1em;
+    margin-right: 3em;
+    background-color: #675c53;
+    border-radius: 0.625em;
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+
+/* alle 'genre' verhalen sectie */
+
 
 /* favoriet toevoegen MI */
 body#verhaalpagina section {
@@ -419,14 +528,14 @@ body#verhaalpagina section.popup-show img {
 }
 
 @keyframes rotation {
-        from {
-                transform: rotate(0deg);
-        }
-        to {
-                transform: rotate(360deg);
-        }
-}
+    from {
+        transform: rotate(0deg);
+    }
 
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 /* media queries tablet */
 @media (min-width: 48em) {
@@ -523,6 +632,8 @@ body#verhaalpagina section.popup-show img {
         font-size: 1.3em;
         width: 14em;
     }
+
+    body#home
 }
 
 /* media queries desktop */
@@ -557,7 +668,12 @@ body#verhaalpagina section.popup-show img {
     }
 
     /* ontdek genres */
-    body section:nth-of-type(2) img {
+    body section:nth-of-type(2) li {
+        width: 15vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    body section:nth-of-type(2) a img {
         width: 10em;
         height: auto;
         border-style: none;
@@ -592,7 +708,7 @@ body#verhaalpagina section.popup-show img {
         background-image: url(../images/alzheimer.png);
     }
 
-        /* verhaal toevoegen MI */
+    /* verhaal toevoegen MI */
     body#verhaalpagina section {
         height: 19em;
         width: 25em;
