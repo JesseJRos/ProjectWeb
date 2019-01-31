@@ -30,20 +30,14 @@ body#home nav:nth-of-type(1) a:first-of-type svg {
     margin-left: 0.5em;
 }
 
-a svg circle {
-    transition: 0.5s;
-}
-
-a svg path {
-    transition: 0.5s;
-}
-
 a:hover svg circle {
     fill: #f2e17a;
+    transition: 0.5s;
 }
 
 a:hover svg path {
     fill: #f2e17a;
+    transition: 0.5s;
 }
 
 a:active svg circle {
@@ -65,12 +59,9 @@ body#home nav:first-child a:last-of-type svg {
     margin-top: -0.5em;
 }
 
-a svg {
-    transition: 0.5s;
-}
-
 a:hover svg {
     fill: #f2e17a;
+    transition: 0.5s;
 }
 
 a:active svg {
@@ -110,17 +101,12 @@ body#home nav:nth-of-type(2) ul li {
 body#home nav:nth-of-type(2) ul li:hover {
     background-color: #443d38;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(39, 39, 39, 0.5);
+    transition: 0.2s;
 }
 
-/*
 body#home nav:nth-of-type(2) ul li:active {
     background-color: #443d38;
-    border-color: #675c53;
-    border-width: 2em;
 }
-*/
-
-/* ^^^^^ Testen op mobiel ^^^^^ */
 
 /* filter knop */
 body nav:nth-of-type(2) ul li:first-of-type button {
@@ -280,6 +266,15 @@ body section:nth-of-type(2) a img {
     margin-left: 0em;
 }
 
+body section:nth-of-type(2) a img:hover {
+    margin-top: 1.5m;
+    margin-bottom: -1.5em;
+    width: 8.5em;
+    height: 4.5em;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(39, 39, 39, 0.3);
+    transition: 0.2s;
+}
+
 /* verder lezen */
 body section {
     position: relative;
@@ -306,6 +301,28 @@ body section a img {
     border-width: 0.1em;
 }
 
+body article ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 7.5em;
+    margin-top: -2.5em;
+}
+
+body section article ul li:nth-of-type(2) img {
+    margin-top: -0.2em;
+}
+
+body section article ul li:nth-of-type(3) img {
+    width: 2.5em;
+    margin-left: 0.5em;
+}
+
+p.rating {
+    font-size: 1.6em;
+    margin: 0;
+    margin-right: 0.2em;
+}
+
 body section a {
     width: 11em;
     margin-right: 1.5em;
@@ -324,10 +341,12 @@ body section article {
 
 body section p {
     font-size: 0.9em;
+    margin-top: 3em;
 }
 
 body section h3 {
     font-size: 1em;
+    height: 2em;
 }
 
 /* footer */
@@ -405,6 +424,7 @@ body#verhaalpagina span img {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
+    border-style: none;
     width: 88vw;
     height: 50em;
     display: block;
@@ -432,6 +452,10 @@ body#verhaalpagina nav:nth-of-type(2) ul li:last-of-type img {
 body#verhaalpagina nav:nth-of-type(2) {
     background-color: #FCD900;
     padding-bottom: 1em;
+}
+
+body#verhaalpagina {
+    background-color: #242428;
 }
 
 /* genre pagina CSS */
@@ -478,10 +502,6 @@ body#genrepagina nav:nth-of-type(2) ul li {
     border-radius: 0.625em;
     padding: 0.5em 0em 0.5em 0em;
 }
-
-
-/* alle 'genre' verhalen sectie */
-
 
 /* favoriet toevoegen MI */
 body#verhaalpagina section {
@@ -540,13 +560,12 @@ body#verhaalpagina section.popup-show img {
 /* media queries tablet */
 @media (min-width: 48em) {
 
-
     /* top nav */
-    body#home nav:first-of-type a:first-of-type img {
+    body#home nav:first-of-type a:first-of-type svg {
         margin-left: 15vw;
     }
 
-    body#home nav:first-of-type a:last-of-type img {
+    body#home nav:first-of-type a:last-of-type svg {
         margin-right: 15vw;
     }
 
@@ -582,6 +601,15 @@ body#verhaalpagina section.popup-show img {
         border-radius: 1em;
         margin-top: 1.5em;
         margin-right: 1.5em;
+    }
+
+    body section:nth-of-type(2) a img:hover {
+        margin-top: 1.5m;
+        margin-bottom: -1.5em;
+        width: 8.5em;
+        height: 4.5em;
+        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(39, 39, 39, 0.3);
+        transition: 0.2s;
     }
 
     /* 99 verhalen img */
@@ -639,12 +667,11 @@ body#verhaalpagina section.popup-show img {
 /* media queries desktop */
 @media (min-width: 67em) {
 
-
-    body#home nav:first-of-type a:first-of-type img {
+    body#home nav:first-of-type a:first-of-type svg {
         margin-left: 31vw;
     }
 
-    body#home nav:first-of-type a:last-of-type img {
+    body#home nav:first-of-type a:last-of-type svg {
         margin-right: 31vw;
     }
 
@@ -673,12 +700,22 @@ body#verhaalpagina section.popup-show img {
         display: flex;
         justify-content: space-between;
     }
+
     body section:nth-of-type(2) a img {
         width: 10em;
         height: auto;
         border-style: none;
         border-radius: 1em;
         margin-right: 2em;
+    }
+
+    body section:nth-of-type(2) a img:hover {
+        margin-top: 1.5m;
+        margin-bottom: -1.5em;
+        width: 10.5em;
+        height: auto;
+        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(39, 39, 39, 0.3);
+        transition: 0.2s;
     }
 
     /* 99 verhalen img */
